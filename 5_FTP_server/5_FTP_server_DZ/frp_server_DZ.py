@@ -45,10 +45,10 @@ def log_print(*strings):
 #Задание №3 авторизация пользователя на сервере(проверяет учетные данные пользователя и авторизует его на сервере.)
 def authorization(message):
     global usersfile, global_root
-    login, message = message.split("=login", 1)
-    password, message = message.split("=password", 1)
-    current_directory, message = message.split("=cur_dir", 1)
-    size, message = message.split("=file_size", 1)
+    login, message = message.split("=login ", 1)
+    password, message = message.split("=password ", 1)
+    current_directory, message = message.split("=cur_dir ", 1)
+    size, message = message.split("=file_size ", 1)
     if login == password == "admin":
          user_root = global_root
     else:
